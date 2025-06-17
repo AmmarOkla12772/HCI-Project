@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e8c99c">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moulpali&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/variables.css?v=1.0.3">
+    <link rel="stylesheet" href="assets/css/reset.css?v=1.0.3">
+    <link rel="stylesheet" href="assets/css/styles.css?v=1.0.4">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="assets/js/main.js?v=1.0.4"></script>
+
+</head>
+<body style="background-color: var(--background-page);">
+
+    <div id="headerS"></div>
+
+    <main class="container py-5">
+        <div class="book-detail-card mx-auto shadow-lg" style="max-width: 500px; border-radius: 1rem; overflow: hidden;">
+
+            <!-- Top Section: Image with beige background -->
+            <div class="book-cover-section d-flex justify-content-center align-items-center" style="background-color: var(--brand-secondary); height: 450px;">
+                <img src="assets/img/81nmItWccYL._SL1199_ 1.png" alt="A Tale of Two Cities" class="img-fluid" style=" height: 55%; width: 35%;">
+            </div>
+
+            <!-- Bottom Section: Details on secondary color -->
+            <div class="book-info-section p-4" style="background-color: var(--book-card-bg); color: white;">
+                <h2 class="mb-2"></h2>
+                <p class="mb-1" style="color: var(--gray-medium);"></p>
+                <p class="mb-4"><strong></strong></p>
+                <p class="mb-2"><span style="color: green;"></span></p>
+                <!-- Action Buttons -->
+                <div class="d-flex gap-3">
+                    <button class="btn btn-borrow flex-fill w-100" data-bs-toggle="modal" data-bs-target="#borrowModal"> Borrow</button>
+                    <button class="btn btn-wishlist flex-fill w-100">Add to Wishlist</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="assets/js/main.js"></script>
+    <!-- Borrow Modal -->
+    <div class="modal fade" id="borrowModal" tabindex="-1" aria-labelledby="borrowModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content" style="background-color: var(--brand-primary); color: white; border-radius: 12px;">
+                <div class="modal-body py-5">
+                    <div class="container">
+                        <div class="row mb-4 text-center">
+                            <div class="col-md-6">
+                                <label for="borrowDate" class="form-label fs-5">Borrow Date</label>
+                                <input type="date" class="form-control form-control-lg" id="borrowDate" />
+                            </div>
+                            <div class="col-md-6">
+                                <label for="returnDate" class="form-label fs-5">Return Date</label>
+                                <input type="date" class="form-control form-control-lg" id="returnDate" />
+                            </div>
+                        </div>
+
+                        <div class="form-check d-flex justify-content-center align-items-center gap-2 mb-4">
+                            <input class="form-check-input align-middle" type="checkbox" id="termsCheck" />
+                            <label class="form-check-label mb-0" for="termsCheck">
+                                I Accept the Terms and Conditions
+                            </label>
+                        </div>
+
+                        <div class="d-flex justify-content-center gap-3">
+                            <button type="button" class="btn btn-borrow px-4" onclick="confirmBorrow()" data-bs-dismiss="modal">Confirm</button>
+                            <button type="button" class="btn btn-wishlist px-4" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/db.js"></script>
+
+    <script>
+        const bookData = {//hard coded instances of the existing books with 6 relevant attributes
+            "book1": {
+                id: "book1",
+                title: "The Art of War",
+                author: "Sun Tzu",
+                description: "Ancient Chinese military treatise offering strategic wisdom still relevant today.",
+                image: "assets/img/51HwNMz3EuL._SL1500_ 1.png",
+                stock: "In Stock"
+            },
+            "book2": {
+                id: "book2",
+                title: "A Tale of Two Cities",
+                author: "Charles Dickens",
+                description: "A classic novel set during the French Revolution, exploring themes of loyalty and sacrifice.",
+                image: "assets/img/81nmItWccYL._SL1199_ 1.png",
+                stock: "In Stock"
+
+            },
+            "book3": {
+                id: "book3",
+                title: "Cyberpunk",
+                author: "William Gibson",
+                description: "Visionary novel that laid the foundation for the cyberpunk genre.",
+                image: "assets/img/image 1.png",
+                stock: "Out of Stock"
+            },
+            "book4": {
+                id: "book4",
+                title: "A Common Sense Guide to Data Structures and Algorithms",
+                author: "Jay Wengrow",
+                description: "A beginner-friendly guide demystifying the world of data structures and algorithms with practical examples.",
+                image: "assets/img/813nURWkkbL._SL1500_ 1.png",
+                stock: "2 Copies Left"
+            },
+            "book5": {
+                id: "book5",
+                title: "Code: The Hidden Language of Computer",
+                author: "Charles Petzold",
+                description: "Explores how computers work from first principles using intuitive explanations and engaging historical insights.",
+                image: "assets/img/coding.png",
+                stock: "In Stock"
+            },
+            "book6": {
+                id: "book6",
+                title: "Why Nations Fail",
+                author: "Daron Acemoglu",
+                description: "A compelling analysis of how institutions and political power shape the success or failure of nations.",
+                image: "assets/img/why nations fail.png",
+                stock: "3 Copies Left"
+            },
+            "book7": {
+                id: "book7",
+                title: "How Life Imitates Chess",
+                author: "Garry Kasparov",
+                description: "World champion chess grandmaster draws parallels between strategy in chess and decision-making in life.",
+                image: "assets/img/chess.png",
+                stock: "In Stock"
+            }
+        };
+
+        //get book ID from URL
+        const params = new URLSearchParams(window.location.search);
+        const bookId = params.get("id");
+        const book = bookData[bookId];
+
+        //fill content dynamically
+        window.addEventListener("DOMContentLoaded", () => {
+            if (!book) return;
+
+            document.querySelector(".book-cover-section img").src = book.image;
+            document.querySelector(".book-cover-section img").alt = book.title;
+            document.querySelector("h2").textContent = book.title;
+            document.querySelector("p.mb-1").textContent = `By ${book.author}`;
+            document.querySelector("p.mb-4").innerHTML = `<strong>Description:</strong> ${book.description}`;
+            document.querySelector("p.mb-2 span").textContent = book.stock;
+
+            //also update confirmBorrow to use this info
+            window.confirmBorrow = function () {
+                const borrowDate = document.getElementById("borrowDate").value;
+                const returnDate = document.getElementById("returnDate").value;
+                const termsChecked = document.getElementById("termsCheck").checked;
+
+                if (!borrowDate || !returnDate) {
+                    alert("Please select both borrow and return dates.");
+                    return;
+                }
+
+                if (!termsChecked) {
+                    alert("You must accept the terms and conditions.");
+                    return;
+                }
+
+                const borrowedBook = {
+                    id: book.id,
+                    title: book.title,
+                    author: book.author,
+                    image: book.image,
+                    borrowDate: borrowDate,
+                    returnDate: returnDate,
+                    timestamp: new Date().toISOString()
+                };
+
+                if (!db) {
+                    console.error("IndexedDB not initialized yet.");
+                    return;
+                }
+
+                const tx = db.transaction("borrowed_books", "readwrite");
+                const store = tx.objectStore("borrowed_books");
+                const request = store.put(borrowedBook);
+
+                request.onsuccess = () => {
+                    console.log("📚 Book saved to borrow history:", borrowedBook);
+                };
+
+                request.onerror = () => {
+                    console.error("❌ Failed to store borrow entry.");
+                };
+            };
+        });
+    </script>
+
+
+</body>
+</html>

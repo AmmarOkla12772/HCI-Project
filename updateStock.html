@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e8c99c">
+    <title>Update Stock</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moulpali&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/variables.css?v=1.0.6">
+    <link rel="stylesheet" href="assets/css/reset.css?v=1.0.6">
+    <link rel="stylesheet" href="assets/css/styles.css?v=1.0.6">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div id="headerL"></div>
+    <!-- Injects shared navbar --
+
+    <!-- Title Banner -->
+    <section class="container mt-5 mb-5">
+
+        <!-- Title Banner -->
+        <div class="student-title-box text-center mb-4">
+            <h2 class="student-title m-0">Update Stock</h2>
+        </div>
+
+        <!-- Form Container -->
+        <div class="notify-form-box">
+
+            <!-- Book Name -->
+            <div class="mb-4">
+                <label for="bookName" class="form-label text-light">Book Name</label>
+                <input list="bookOptions" id="bookName" class="form-control student-input" placeholder="Start typing..." />
+                <datalist id="bookOptions">
+                    <option value="To Kill a Mockingbird">
+                    <option value="A Tale of Two Cities">
+                    <option value="The Art of War">
+                    <option value="Cyberpunk">
+                    <option value="Code: The Hidden Language of Computer">
+                    <option value="Why Nations Fail">
+                    <option value="How Life Imitates Chess">
+                    <option value="A Common Sense Guide to Data Structures">
+                </datalist>
+            </div>
+
+            <!-- Total Copies -->
+            <div class="mb-4">
+                <label for="totalCopies" class="form-label text-light">Total Copies</label>
+                <input type="number" id="totalCopies" class="form-control student-input" placeholder="Enter number" min="0" />
+            </div>
+
+            <!-- Buttons -->
+            <div class="d-flex justify-content-end gap-3">
+                <a href="../librarian.html" class="btn btn-borrow px-4">Cancel</a>
+                <a href="../librarian.html" class="btn btn-borrow px-4">Update</a>
+            </div>
+
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <div id="footer"></div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/db.js"></script>
+
+</body>
+</html>

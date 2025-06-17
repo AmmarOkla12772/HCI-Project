@@ -1,0 +1,26 @@
+{
+    "name": "Libraria",
+    "short_name": "Libraria",
+    "description": "Library Guest Portal",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#e8c99c",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/assets/img/ICON.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/assets/img/ICON.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "splash_pages": null
+}

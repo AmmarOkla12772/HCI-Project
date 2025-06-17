@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e8c99c">
+    <meta charset="UTF-8">
+    <title>Library Guest</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moulpali&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/variables.css?v=1.0.7">
+    <link rel="stylesheet" href="assets/css/reset.css?v=1.0.7">
+    <link rel="stylesheet" href="assets/css/styles.css?v=1.0.7">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <!-- HERO SLIDER -->
+    <section class="container mt-4">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/img/Group 2.png" class="carousel-image" alt="Campus">
+                    <div class="carousel-caption d-none d-md-block text-start"
+                         style="position: absolute; top: 0; left: 0; bottom: 0; width: 40%; background-color: rgba(232, 201, 156, 0.8); color: black; padding: var(--space-md); ">
+                        <h5>Discover your next chapter</h5>
+                        <p>Join our guided campus tour and experience the library, learning spaces, and student life firsthand</p>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img src="assets/img/image 4.png" class="carousel-image" alt="Study Rooms">
+                    <div class="carousel-caption d-none d-md-block text-start"
+                         style="position: absolute; top: 0; left: 0; bottom: 0; width: 40%; background-color: rgba(232, 201, 156, 0.8); color: black; padding: var(--space-md); ">
+                        <h5>Discover your next chapter</h5>
+                        <p>Join our guided campus tour and experience the library, learning spaces, and student life firsthand</p>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img src="assets/img/libraryBIG.png" class="carousel-image" alt="Book Selection">
+                    <div class="carousel-caption d-none d-md-block text-start"
+                         style="position: absolute; top: 0; left: 0; bottom: 0; width: 40%; background-color: rgba(232, 201, 156, 0.8); color: black; padding: var(--space-md); ">
+                        <h5>Discover your next chapter</h5>
+                        <p>Join our guided campus tour and experience the library, learning spaces, and student life firsthand</p>
+                    </div>
+                </div>
+                <!-- Add more .carousel-item here -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+
+    <section class="position-relative mt-5">
+        <h3 class="mb-3 px-3">Featured</h3>
+
+        <!-- Carousel Wrapper -->
+        <div class="carousel-scroll-wrapper position-relative">
+
+            <!-- Left Button -->
+            <button class="carousel-nav left" onclick="scrollCarouselById('featuredCarousel', -1)">&#10094;</button>
+
+            <!-- Scrollable Container -->
+            <div class="carousel-scroll" id="featuredCarousel">
+                <a href="#" class="book-card">
+                    <div class="card book-card-inner">
+                        <img src="assets/img/813nURWkkbL._SL1500_ 1.png" alt="A Common Sense Guide to Data Structures and Algorithms">
+                        <div class="card-body">
+                            <h6 class="card-title">A Common Sense Guide to Data Structures and Algorithms</h6>
+                            <p class="card-text"><small>Harper Lee</small><br><span style="color: yellow;">2 Copies Left</span></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="book-card">
+                    <div class="card book-card-inner">
+                        <img src="assets/img/81nmItWccYL._SL1199_ 1.png" class="card-img-top" alt="A Tale of Two Cities">
+                        <div class="card-body">
+                            <h6 class="card-title">A Tale of Two Cities</h6>
+                            <p class="card-text"><small>Charles Dickens</small><br><span style="color: green;">In Stock</span></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="book-card">
+                    <div class="card book-card-inner">
+                        <img src="assets/img/51HwNMz3EuL._SL1500_ 1.png" class="card-img-top" alt="The Art of War">
+                        <div class="card-body">
+                            <h6 class="card-title">The Art of War</h6>
+                            <p class="card-text"><small>Sun Tzu</small><br><span style="color: green;">In Stock</span></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="book-card">
+                    <div class="card book-card-inner">
+                        <img src="assets/img/image 1.png" class="card-img-top" alt="Cyberpunk">
+                        <div class="card-body">
+                            <h6 class="card-title">Cyberpunk</h6>
+                            <p class="card-text"><small>Gibson</small><br><span style="color: red;">Out of Stock</span></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="book-card">
+                    <div class="card book-card-inner">
+                        <img src="assets/img/coding.png" class="card-img-top" alt="Code: The Hidden Language of Computer">
+                        <div class="card-body">
+                            <h6 class="card-title">Code</h6>
+                            <p class="card-text"><small>Charles Petzold</small><br><span style="color: green;">2 Copies Left</span></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="book-card">
+                    <div class="card book-card-inner">
+                        <img src="assets/img/why nations fail.png" class="card-img-top" alt="Why Nations Fail">
+                        <div class="card-body">
+                            <h6 class="card-title"> Why Nations Fail</h6>
+                            <p class="card-text"><small>Daron Acemoglu</small><br><span style="color: yellow;">3 Copies Left</span></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="book-card">
+                    <div class="card book-card-inner">
+                        <img src="assets/img/chess.png" class="card-img-top" alt="How Life Imitates Chess">
+                        <div class="card-body">
+                            <h6 class="card-title">How Life Imitates Chess</h6>
+                            <p class="card-text"><small>Gary Kasparov</small><br><span style="color: green;">In Stock</span></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="book-card">
+                    <div class="card book-card-inner">
+                        <img src="assets/img/coding.png" class="card-img-top" alt="To Kill a Mockingbird">
+                        <div class="card-body">
+                            <h6 class="card-title">To Kill a Mockingbird</h6>
+                            <p class="card-text"><small>Harper Lee</small><br><span style="color: green;">2 Copies Left</span></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="book-card">
+                    <div class="card book-card-inner">
+                        <img src="assets/img/coding.png" class="card-img-top" alt="To Kill a Mockingbird">
+                        <div class="card-body">
+                            <h6 class="card-title">To Kill a Mockingbird</h6>
+                            <p class="card-text"><small>Harper Lee</small><br><span style="color: green;">2 Copies Left</span></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="book-card">
+                    <div class="card book-card-inner">
+                        <img src="assets/img/coding.png" class="card-img-top" alt="To Kill a Mockingbird">
+                        <div class="card-body">
+                            <h6 class="card-title">To Kill a Mockingbird</h6>
+                            <p class="card-text"><small>Harper Lee</small><br><span style="color: green;">2 Copies Left</span></p>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="book-card">
+                    <div class="card book-card-inner">
+                        <img src="assets/img/coding.png" class="card-img-top" alt="To Kill a Mockingbird">
+                        <div class="card-body">
+                            <h6 class="card-title">To Kill a Mockingbird</h6>
+                            <p class="card-text"><small>Harper Lee</small><br><span style="color: green;">2 Copies Left</span></p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Add more book-card items here -->
+            </div>
+
+            <!-- Right Button -->
+            <button class="carousel-nav right" onclick="scrollCarouselById('featuredCarousel', 1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Info Panels -->
+    <section class="d-flex container mt-5">
+        <div class="row g-4">
+            <!-- Button 1 -->
+            <div class="col-md-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-100 text-var(--text-light) librarian-tile">
+                        <img src="assets/img/OIP (3) 1.png" class="card-img-top" alt="Categories">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Browse Categories</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Button 2 -->
+            <div class="col-md-4">
+                <a href="resources.html" class="text-decoration-none">
+                    <div class="card h-100 text-var(--text-light) librarian-tile">
+                        <img src="assets/img/image 3.png" class="card-img-top" alt="Location">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Location</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Button 3 -->
+            <div class="col-md-4">
+                <a href="returns.html" class="text-decoration-none">
+                    <div class="card h-100 text-var(--text-light) librarian-tile">
+                        <img src="assets/img/OIP (9) 1.png" class="card-img-top" alt="Announcements">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Announcements</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    </section>
+
+    <!-- Add this just before the footer -->
+    <div style="height: 60px;"></div>
+    <div id="footer"></div>
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/db.js"></script>
+</body>
+</html>

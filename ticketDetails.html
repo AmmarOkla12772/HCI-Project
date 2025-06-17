@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e8c99c">
+    <title>Ticket Details</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moulpali&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/variables.css?v=1.0.3">
+    <link rel="stylesheet" href="assets/css/reset.css?v=1.0.3">
+    <link rel="stylesheet" href="assets/css/styles.css?v=1.0.3">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="assets/js/main.js?v=1.0.3"></script>
+</head>
+<body style="background-color: var(--background-page);">
+    <div id="headerL"></div>
+
+    <section class="container mt-5 mb-5">
+
+        <!-- Page Title -->
+        <div class="student-title-box text-center mb-4">
+            <h2 class="student-title m-0">Ticket Details</h2>
+        </div>
+
+        <!-- Ticket Container -->
+        <div class="notify-form-box">
+
+            <!-- Student Info -->
+            <div class="mb-4 text-light">
+                <p class="mb-1"><strong>Student:</strong> Fatima Al Mazrouei</p>
+                <p class="mb-1"><strong>Date:</strong> 2025-06-05</p>
+                <p class="mb-0"><strong>Subject:</strong> Library Card Issue</p>
+            </div>
+
+            <!-- Message Area (read-only) -->
+            <div class="mb-4">
+                <div class="form-control message-input" style="background-color: white; height:200px" readonly>
+                    Hello, I tried to borrow a book but it says my library card is inactive. I renewed it last semester so I'm not sure why this is happening. Could someone check?
+                </div>
+            </div>
+
+            <!-- Reply Button -->
+            <div class="d-flex justify-content-end">
+                <a href="../ticketReply.html" class="btn btn-borrow px-4">Reply</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/db.js"></script>
+</body>
+</html>

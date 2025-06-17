@@ -1,0 +1,24 @@
+﻿
+
+html {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    background-color: var(--gray-light);
+    color: var(--text-dark);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+input {
+    font-family: inherit;
+}

@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e8c99c">
+    <title>Manage Books</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moulpali&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/variables.css?v=1.0.3">
+    <link rel="stylesheet" href="assets/css/reset.css?v=1.0.3">
+    <link rel="stylesheet" href="assets/css/styles.css?v=1.0.4">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="assets/js/main.js?v=1.0.4"></script>
+</head>
+<body style="background-color: var(--background-page);">
+
+    <div id="headerL"></div>
+
+    <section class="container mt-5 mb-5" style="max-width: 1100px; margin: auto;">
+
+        <!-- Title -->
+        <div class="student-title-box text-center mb-4">
+            <h2 class="student-title m-0">Manage Books</h2>
+        </div>
+
+        <!-- Action Button -->
+        <div class="d-flex justify-content-start mb-3">
+            <a href="../updateStock.html" class="btn notify-btn text-dark">Update Stock</a>
+        </div>
+
+        <!-- Table Header -->
+        <div class="student-row student-header fw-bold text-uppercase">
+            <div class="col-name">Name</div>
+            <div class="col-requests text-center">Available</div>
+            <div class="col-returns text-center">Borrowed</div>
+            <div class="col-total text-end">Total</div>
+        </div>
+
+        <!-- Book Rows -->
+        <div class="student-row" style="--row-bg: #fffbe7;">
+            <div class="col-name">To Kill a Mockingbird</div>
+            <div class="col-requests text-center">2</div>
+            <div class="col-returns text-center">3</div>
+            <div class="col-total text-end">5</div>
+        </div>
+
+        <div class="student-row" style="--row-bg: #f0fff0;">
+            <div class="col-name">A Tale of Two Cities</div>
+            <div class="col-requests text-center">4</div>
+            <div class="col-returns text-center">1</div>
+            <div class="col-total text-end">5</div>
+        </div>
+
+        <div class="student-row" style="--row-bg: #f9f9ff;">
+            <div class="col-name">The Art of War</div>
+            <div class="col-requests text-center">3</div>
+            <div class="col-returns text-center">0</div>
+            <div class="col-total text-end">3</div>
+        </div>
+
+        <div class="student-row" style="--row-bg: #fff0f0;">
+            <div class="col-name">Cyberpunk</div>
+            <div class="col-requests text-center">0</div>
+            <div class="col-returns text-center">2</div>
+            <div class="col-total text-end">2</div>
+        </div>
+
+        <div class="student-row" style="--row-bg: #f0f8ff;">
+            <div class="col-name">Code: The Hidden Language of Computer</div>
+            <div class="col-requests text-center">2</div>
+            <div class="col-returns text-center">1</div>
+            <div class="col-total text-end">3</div>
+        </div>
+
+        <div class="student-row" style="--row-bg: #e8f6ff;">
+            <div class="col-name">Why Nations Fail</div>
+            <div class="col-requests text-center">3</div>
+            <div class="col-returns text-center">0</div>
+            <div class="col-total text-end">3</div>
+        </div>
+
+        <div class="student-row" style="--row-bg: #f8fdfd;">
+            <div class="col-name">How Life Imitates Chess</div>
+            <div class="col-requests text-center">1</div>
+            <div class="col-returns text-center">2</div>
+            <div class="col-total text-end">3</div>
+        </div>
+
+        <div class="student-row" style="--row-bg: #fcfcf5;">
+            <div class="col-name">A Common Sense Guide to Data Structures</div>
+            <div class="col-requests text-center">1</div>
+            <div class="col-returns text-center">1</div>
+            <div class="col-total text-end">2</div>
+        </div>
+    </section>
+
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/db.js"></script>
+</body>
+</html>

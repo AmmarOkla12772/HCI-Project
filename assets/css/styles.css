@@ -1,0 +1,551 @@
+﻿
+html, body { /*BACKGROUND COLOR SETTER*/
+    height: 100%;
+    background-color: var(--background-page) !important;
+    font-family: 'Moulpali', sans-serif !important;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 650px; /* or 500px or whatever looks good across all images */
+    object-fit: cover; /* Ensures the image fills the area without distortion */
+    object-position: center;
+}
+
+.carousel-caption h5 {
+    font-size: var(--font-size-xl);
+    font-weight: bold;
+}
+
+.carousel-caption {
+    font-size: var(--font-size-lg);
+    font-weight: bold;
+}
+
+.carousel-scroll-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-scroll {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem 3rem; /* padding left/right to leave room for buttons */
+    scrollbar-width: none; /* Firefox */
+}
+
+   /* Hide scrollbar (Chrome, Safari, Edge) */
+  .carousel-scroll::-webkit-scrollbar {
+      display: none;
+ }
+
+.book-card {
+    flex: 0 0 auto;
+    width: 180px;
+    text-decoration: none;
+    color: inherit;
+    height: 350px;
+}
+
+.book-card-inner {
+    background-color: var(--book-card-bg) !important;
+    color:white !important;
+    height: 350px !important; /* fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.book-card-inner img.card-img-top {
+  height: 250px !important;          /* fixed image height */
+  object-fit: cover;      /* make sure image fits limit without distortion */
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.book-card-inner .card-body {
+  flex-grow: 1;
+  padding: 0.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.book-card-inner:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+
+}
+
+/* NAV BUTTONS FIXED */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 1.25rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 0.25rem; /* slightly rounded edgesl */
+}
+
+    .carousel-nav:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .carousel-nav.left {
+        left: 0.25rem;
+    }
+
+    .carousel-nav.right {
+        right: 0.25rem;
+    }
+
+.navbar .nav-link { /*FOR HEADER CLASS FONTS*/
+    font-size: 1.75rem; 
+    font-weight: 500; /* bold */
+    padding-left: 1.5rem; 
+    padding-right: 1.5rem;
+}
+
+.role-card {
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+    .role-card:hover {
+        transform: scale(1.02);
+    }
+
+.role-image {
+    height: 420px;
+    border-radius: 5rem;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.role-label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--book-card-bg);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.25rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+/* Enable Bootstrap dropdown on hover */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* removes awkward spacing */
+}
+
+#siteSearchForm {
+    position: relative;
+}
+
+#searchSuggestions {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.btn-category {
+    background-color: var(--brand-secondary) !important;
+    color: var(--brand-primary) !important;
+    border: 2px solid var(--brand-secondary) !important;
+    font-weight: 500;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+    .btn-category:hover {
+        background-color: var(--brand-secondary) !important;
+        color: var(--text-light) !important;
+    }
+
+.btn-borrow {
+    background-color: var(--brand-secondary) !important;
+    color: var(--brand-primary) !important;
+    border: 2px solid var(--brand-secondary) !important;
+    font-weight: 500 !important;
+    padding: 0.5rem 1.25rem !important;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+    .btn-borrow:hover {
+        background-color: var(--brand-secondary) !important;
+        color: var(--text-light) !important;
+    }
+
+.btn-wishlist {
+    background-color: var(--brand-secondary) !important;
+    color: var(--brand-primary) !important;
+    border: 2px solid var(--brand-secondary) !important;
+    font-weight: 500 !important;
+    padding: 0.5rem 1.25rem !important;
+    border-radius: 0.375rem !important;
+    transition: background-color 0.3s ease, color 0.3s ease !important;
+}
+
+    .btn-wishlist:hover {
+        background-color: var(--brand-secondary) !important;
+        color: var(--text-light) !important;
+    }
+
+.form-check-input {
+    transform: translateY(-3px); /*to align the checkbox in the borrow modal*/
+}
+
+/* Borrow History Styles */
+.history-strip {
+    display: flex;
+    align-items: center;
+    background-color: var(--brand-primary) !important;
+    color: white !important;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    font-size: 0.95rem;
+}
+
+.history-header {
+    font-weight: bold;
+    background-color: transparent;
+    box-shadow: none;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.5rem;
+}
+
+.resource-img {
+    width: 60px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.resource-title {
+    flex: 2;
+    color: var(--text-light);
+}
+
+.date-col {
+    flex: 1;
+    color: var(--text-light);
+}
+
+.return-due-soon {
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.librarian-btn-inner {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+    .librarian-btn-inner:hover {
+        transform: scale(1.02);
+    }
+
+.librarian-btn-footer {
+    margin-top: auto;
+    background-color: var(--brand-primary);
+    color: var(--text-light);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.stats-panel {
+    width: 80%;
+    background-color: var(--brand-primary);
+    border-radius: 1rem;
+    color: var(--text-light);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    margin-bottom: 5rem; /* Creates distance from footer */
+}
+
+.stat-strip {
+    background-color: var(--brand-secondary);
+    padding: 0.75rem 1rem;
+    color: var(--text-dark);
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+}
+
+.student-row {
+    display: flex;
+    align-items: center;
+    background-color: var(--brand-secondary) !important;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+.student-header {
+    background-color: var(--brand-primary) !important;
+    color: var(--text-light);
+}
+
+.col-name,
+.col-requests,
+.col-returns {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+.col-name {
+    text-align: left;
+}
+
+.col-requests {
+    text-align: center;
+}
+
+.col-returns {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.col-total {
+    flex: 1;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.student-title-box {
+    background-color: var(--brand-primary);
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    margin: 2rem auto 1rem auto;
+    text-align: center;
+    width: 40%;
+    max-width: 300px;
+}
+
+.student-title {
+    color: var(--text-light);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+}
+.notify-btn {
+    background-color: var(--brand-secondary) !important;
+    border: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom:0.5rem;
+}
+
+    .notify-btn:hover {
+        background-color: #d5b866; /* Slightly darker shade of secondary */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        color: white !important;
+    }
+
+.notify-header-box {
+    background-color: var(--brand-primary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 2rem auto;
+}
+
+.notify-header-title {
+    color: var(--text-light);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.notify-form-box {
+    background-color: var(--brand-primary);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.student-input,
+.message-input {
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+    .student-input:focus,
+    .message-input:focus {
+        outline: 2px solid var(--brand-secondary);
+        box-shadow: none;
+    }
+
+.librarian-tile {
+    background-color: var(--brand-primary) !important;
+    color: var(--text-light) !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 0.75rem;
+}
+
+    .librarian-tile:hover {
+        transform: scale(1.02);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    }
+
+/* Make each row fully clickable without breaking styling */
+.ticket-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+    /* Optional: subtle hover effect */
+    .ticket-link:hover .student-row {
+        color:var(--text-light);
+        background-color: #e9f5ff;
+        cursor: pointer;
+    }
+
+/* Optional: align "NEW REPLY" to the left of subject text */
+.col-requests {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.new-reply-badge {
+    position: absolute;
+    left: -6rem; /* Adjust based on your layout */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+.col-role {
+    flex: 1;
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.setting-strip {
+    background-color: var(--brand-primary);
+    color: var(--text-light);
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+}
+
+    .setting-strip:hover {
+        background-color: #494F52; /* Slight hover effect */
+        cursor: pointer;
+    }
+
+    .setting-strip i {
+        font-size: 1.2rem;
+        color: black;
+    }
+.main-content {
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+}
+
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures wrapper fills viewport */
+    background: var(--body-bg); /* Your page background */
+}
+
+.content {
+    flex: 1; /* Expands to push footer down */
+    padding-bottom: 60px; /* Matches footer height */
+}
+
+.site-footer {
+    height: 60px;
+    background: var(--brand-primary);
+    color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+/* PWA-specific adjustments */
+@media (display-mode: standalone) {
+    .site-footer {
+        padding-bottom: env(safe-area-inset-bottom);
+        height: calc(60px + env(safe-area-inset-bottom));
+    }
+}
+
+.notification-fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#notify-btn {
+    background: var(--brand-secondary);
+    border: var(--brand-secondary);
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+    #notify-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }

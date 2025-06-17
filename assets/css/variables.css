@@ -1,0 +1,27 @@
+﻿:root {
+    /*carousel caption background*/
+    --caption-bg: rgba(232, 201, 156, 0.8);
+    --book-card-bg: #393D3F; /* small carousel bg */
+    /* Brand colors */
+    --brand-primary: #393D3F;
+    --brand-secondary: #E8C99C;
+    --brand-accent: #E84545;
+    --gray-light: #F7F7F7;
+    --gray-medium: #CCCCCC;
+    --text-dark: #1A1A1A;
+    --text-light: #FFFFFF;
+    /* Existing color variables… */
+    --background-page: #FAF3E0; /* ← BACKGROUND COLOR */
+    /* Typography */
+    --font-sans: 'Inter', sans-serif;
+    --font-size-xl: 3rem;
+    --font-size-lg: 2.0rem;
+    --font-size-md: 1rem;
+    --font-size-sm: 0.875rem;
+    /* Spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+}
